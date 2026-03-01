@@ -169,6 +169,46 @@
   </style>
 </head>
 <body>
+  <section id="admin-template" style="text-align:center; margin:30px 0;">
+  <h3 style="color:#38bdf8;">Admin Quick Reply Template</h3>
+  <button onclick="copyAdminTemplate()" style="
+    padding:12px 20px;
+    background:#38bdf8;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+  ">Copy Admin Response ✅</button>
+  </section>
+  <script>
+function copyAdminTemplate() {
+  var template = `Asante kwa kuwasiliana na MpungaTech 👋
+  
+Tumeipokea order yako ya [SERVICE].
+Tafadhali tupe muda mfupi tukuhudumie.
+
+📍 Dar es Salaam
+📞 06 179 21539
+🌐 mpungatech.github.io`;
+
+  // Copy to clipboard
+  navigator.clipboard.writeText(template).then(function() {
+    alert("Admin template copied! Ready to paste in WhatsApp.");
+  }, function(err) {
+    alert("Failed to copy template: " + err);
+  });
+}
+    var service = document.getElementById("service").value;
+var template = `Asante kwa kuwasiliana na MpungaTech 👋
+
+Tumeipokea order yako ya ${service}.
+Tafadhali tupe muda mfupi tukuhudumie.
+
+📍 Dar es Salaam
+📞 06 179 21539
+🌐 mpungatech.github.io`;
+  </script>
   <section id="order">
   <h2 style="text-align:center; color:#38bdf8;">Place Your Order</h2>
 
